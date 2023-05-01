@@ -1,5 +1,33 @@
 
-import { filtradoPorTipo, ordenar, ordenarZa } from '../src/data.js';
+import { filtradoPorTipo, ordenar, ordenarZa, filtradoPorGeneracion } from '../src/data.js';
+
+describe('filtradoPorGeneracion', () => {
+  it('Devuelve un array solo con los elementos de la generacion especificada', () => {
+    const data1 = [
+      {
+        id: 1, generation: {
+          num: "generation i",
+          name: "kanto"
+        }
+      },
+      {
+        id: 2, generation: {
+          num: "generation ii",
+          name: "johto"
+        }
+      }]
+
+    const generacion="kanto"
+    const resultado = filtradoPorGeneracion(data1, generacion)
+    expect(resultado).toContain([{
+      id: 1, generation: {
+        num: "generation i",
+        name: "kanto"
+      }
+    }])
+  });
+
+})
 
 describe('filtradoPorTipo', () => {
 

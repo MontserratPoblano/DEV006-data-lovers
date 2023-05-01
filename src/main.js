@@ -1,4 +1,4 @@
-import { mostrarPokemon, ordenar,ordenarZa,busquedaName,filtradoPorTipo,datosTarjeta } from './data.js';
+import { mostrarPokemon, ordenar,ordenarZa,busquedaName,filtradoPorTipo,datosTarjeta, filtradoPorGeneracion } from './data.js';
 // import data from './data/lol/lol.js';
 import {Objetos} from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -9,6 +9,8 @@ let pokemonPantalla=Objetos.pokemon
 
 
 const btnFiltro = document.querySelectorAll('.filtro-tipo');
+const btnGeneracion=document.querySelector("#kanto")
+const btnGeneracion2=document.querySelector("#johto")
 const btnData = document.getElementById('ver-todos');
 const btnAz=document.getElementById('filtrarAz');
 const btnZa=document.getElementById('filtrarZa');
@@ -39,6 +41,7 @@ btnFiltro.forEach(boton => boton.addEventListener ('click', (e)=> {
   mostrarPokemon(pokemonPantalla)
 }));
 
+
 btnAz.addEventListener("click", ()=>{
   listaPokemon.innerHTML=" ";
   const ordenarAzz = ordenar(pokemonPantalla)
@@ -53,6 +56,26 @@ btnZa.addEventListener("click", ()=>{
   mostrarPokemon(ordenarZaa)
   
 });
+
+
+btnGeneracion.addEventListener("click",(e)=>{
+  const generacion=e.target.id;
+  pokemonPantalla=filtradoPorGeneracion(Objetos.pokemon,generacion)
+  const kanto=pokemonPantalla.length
+  const total=Objetos.pokemon.length
+  const porciento=kanto * 100/total
+  alert("El porcentaje que puedes encontrar de generación Kanto de un total de 251 pokemones es:" + Math.round(porciento)+ "%")
+})
+
+btnGeneracion2.addEventListener("click",(e)=>{
+  const generacion=e.target.id;
+  pokemonPantalla=filtradoPorGeneracion(Objetos.pokemon,generacion)
+  console.log(pokemonPantalla)
+  const johto=pokemonPantalla.length
+  const total=Objetos.pokemon.length
+  const porciento=johto * 100/total
+  alert("El porcentaje que puedes encontrar de generación Johto de un total de 251 pokemones es:" + Math.round(porciento)+ "%")
+})
 
 
 iconobusqueda.addEventListener("click", ()=>{
@@ -70,7 +93,6 @@ function agregarPokemon(e){
   if(e.target.classList.contains("pokebola")){
     const ident=e.target.id
     tipos2=[...tipos2,ident]
-    console.log(tipos2)
     const pokebo=e.target.parentElement.parentElement;
     const datitos=datosTarjeta(pokebo);
     
@@ -79,19 +101,19 @@ function agregarPokemon(e){
       const pokemones=articulosCarrito.map(elemento=>{
        
         if(elemento.nombre===datitos.nombre){
-             elemento.cantidad++;
+          elemento.cantidad++;
           return elemento
         }else{
           return elemento;
         }
       });
-       articulosCarrito=[...pokemones]
+      articulosCarrito=[...pokemones]
     }else{
       articulosCarrito=[...articulosCarrito,datitos]
       
     }
 
-    console.log(articulosCarrito)
+  
     
     carritoHTML()
     
@@ -104,11 +126,11 @@ function agregarPokemon(e){
 function carritoHTML() {
   contenedorPoke.innerHTML = " ";
   
-    articulosCarrito.forEach(pokebo => {
-  const row = document.createElement('tr');
-  row.innerHTML = `
-     <td>
-     <img src = "${pokebo.imagen}" width = "80">
+  articulosCarrito.forEach(pokebo => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>
+      <img src = "${pokebo.imagen}" width = "80">
      </td>
   
      <td>${pokebo.nombre}</td>
@@ -116,18 +138,16 @@ function carritoHTML() {
      <td>${pokebo.tipo} </td>
   `;
    
-   contenedorPoke.appendChild(row);
-    });
+    contenedorPoke.appendChild(row);
+  });
   
-  }
+}
 
-  vaciarPokebola.addEventListener("click",()=>{
+vaciarPokebola.addEventListener("click",()=>{
+      
+})
 
-    articulosCarrito.filter
-  })
-
-
-
+  
 
 
 

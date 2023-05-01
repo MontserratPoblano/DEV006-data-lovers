@@ -2,7 +2,6 @@ import {Objetos} from './data/pokemon/pokemon.js';
 
 export  function mostrarPokemon(data) {
   const filterByType = data.length > 0 ? data: Objetos.pokemon
-  let pokemonAgregado=[];
   const listaPokemon = document.getElementById('listaPokemon');
   
   
@@ -154,6 +153,10 @@ export function filtradoPorTipo(data,type) {
 }
 
 
+export function filtradoPorGeneracion(data,generacion){
+  const datosGeneracion=data.filter(elemento=>elemento.generation.name.includes(generacion))
+  return datosGeneracion
+}
 
 
 export function ordenar(data){
