@@ -129,8 +129,10 @@ function carritoHTML() {
   articulosCarrito.forEach(pokebo => {
     const row = document.createElement('tr');
     row.innerHTML = `
-      <td>
-      <img src = "${pokebo.imagen}" width = "80">
+
+     <td>
+     <img src = "${pokebo.imagen}" width = "80">
+      
      </td>
   
      <td>${pokebo.nombre}</td>
@@ -142,6 +144,7 @@ function carritoHTML() {
   });
   
 }
+
 
 vaciarPokebola.addEventListener("click",()=>{
       
