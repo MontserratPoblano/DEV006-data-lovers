@@ -79,13 +79,13 @@ function agregarPokemon(e){
       const pokemones=articulosCarrito.map(elemento=>{
        
         if(elemento.nombre===datitos.nombre){
-             elemento.cantidad++;
+          elemento.cantidad++;
           return elemento
         }else{
           return elemento;
         }
       });
-       articulosCarrito=[...pokemones]
+      articulosCarrito=[...pokemones]
     }else{
       articulosCarrito=[...articulosCarrito,datitos]
       
@@ -104,9 +104,9 @@ function agregarPokemon(e){
 function carritoHTML() {
   contenedorPoke.innerHTML = " ";
   
-    articulosCarrito.forEach(pokebo => {
-  const row = document.createElement('tr');
-  row.innerHTML = `
+  articulosCarrito.forEach(pokebo => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
      <td>
      <img src = "${pokebo.imagen}" width = "80">
      </td>
@@ -116,15 +116,15 @@ function carritoHTML() {
      <td>${pokebo.tipo} </td>
   `;
    
-   contenedorPoke.appendChild(row);
-    });
+    contenedorPoke.appendChild(row);
+  });
   
-  }
+}
 
-  vaciarPokebola.addEventListener("click",()=>{
+vaciarPokebola.addEventListener("click",()=>{
 
-    articulosCarrito.filter
-  })
+  articulosCarrito.filter
+})
 
 
 

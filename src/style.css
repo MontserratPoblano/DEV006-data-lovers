@@ -686,8 +686,6 @@ article > section:nth-child(3){
 
 .pokemon {
     border-radius: 1rem;
-    /*background-color: rgba(4, 25, 216, .17);
-    box-shadow: 0 0 3rem -1rem rgba(4, 25, 216, 0.4);*/
     background-color: #9ae5f3;
     padding-block: 1rem;
     text-transform: uppercase;
@@ -852,68 +850,6 @@ article > section:nth-child(3){
    
 }
 
-
-
-/*.modal .infoGeneral {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 50%;
-    height: 10%;
-    border: 1px solid salmon;
-    overflow: hidden;
-    
-}*/
-/*
-
-.modal .infoGeneral p{
-    font-size: 15px;
-    color:#292929;
-    text-align: center;
-}*/
-
-/*.modal .infoGeneral .fa-solid{
-    color:#FFD700
-}
-
-/*.modal .caja-alineada{
-display: flex;
-justify-content: space-around;
-margin-top:20px;
-border: 1px solid green;
-}*/
-
-/*.caja-alineada .baseDefensa .fa-solid{
-    color:#FFD700
-}
-
-.caja-alineada .baseDefensa{
-    margin-top: 22px;
-    padding-top: 30px;
-}*/
-
-/*.modal .resistant{
-    border:4px solid #19e938;
-    border-radius: 30px;
-    width: 50%;
-    height: auto;
-    border:#19e938
-
-}
-
-.modal .weaknesses{
-    border:4px solid #d20906;
-    border-radius: 30px;
-    width: 180px;
-    height: 200px;
-    
-}
-
-/*.modal .caja-alineada2{
-    display: flex;
-    justify-content: space-around;
-
-}*/
 .baseDefensa{
     width: 100%;
     grid-column: 2 / 3;
@@ -1015,4 +951,176 @@ border: 1px solid green;
 p.evolucion{
     font-size: 13px;
     color: #293462;
+}
+
+
+@media screen and (max-width:768px) {
+    .nav-burger {
+        font-size: 32px;
+        padding: 15px 25px;
+    }
+    .fa-solid, .fas {
+        padding-right: 15px;
+    }
+
+    #busqueda {
+        min-width: 55%;
+        height: 18%;
+        margin: 18px 22px;
+    }    
+    .pokemon-todos {
+        display: grid;
+        grid-template-columns: 0.25fr 0.25fr 0.25fr;
+        gap: 1.4rem;
+    
+    }
+
+    #seccion2 img {
+        max-width: 8%;
+        border-radius: 40%;
+    }
+
+
+    #seccion2 button {
+        width: 90px;
+        height: 60px;
+        font-size: 25px;
+        margin-top: 25px;
+    }
+    .modal {
+        width: 80%;
+        height: 70%;
+        display:grid;
+        grid-template-columns: auto;
+        left: 10%;
+        
+    }
+
+    .modal img {
+        width: 80%;
+    }
+
+    .baseDefensa p.about {
+        padding-top: 30px;
+        font-size: 17px;
+        padding-bottom: 2px;
+    }
+
+    .specialAtack h3 {
+        font-size: 20px;
+        padding-right: 25px;
+    }
+
+    .stats h3 {
+       text-align: center;
+    }
+
+    .stats p{
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .specialAtack li {
+        font-size: 16px;
+        margin-left: 38px;
+    }
+
+    .caja1 h3 {
+        padding-top: 55px;
+        padding-left: 12px;
+    }
+
+    .evolution h3 {
+    padding-top: 18px;
+    }
+
+    .resistencia h3, .weakness h3 {
+        font-size: 20px;
+        padding-top: 10px;
+        text-align: center;
+}
+
+.resistencia p, .weakness p {
+    font-size: 16px;
+    padding-right: 25px;
+}
+
+.close {
+    width: 45px;
+}
+}
+
+@media screen and (max-width:576px) {
+     .nav-burger {
+        font-size: 26px;
+        padding: 10px 25px;
+    }
+    article > section:nth-child(1) {
+        margin: 0 0;
+        min-width: 100%;
+        height:auto;
+    }
+    #seccion1 h1 {
+        min-width: 100%;
+        font-size: 28px;
+        padding-top: 50px;
+        padding-bottom: 5px;
+    }
+
+    #seccion1 #campoBusqueda {
+        max-width: 100%;
+    
+    }
+
+    #busqueda {
+        min-width: 65%;
+        margin: 10px 15px;
+
+    }
+
+    #seccion2 button {
+    width: 80px;
+    height: 55px;
+    font-size: 20px;
+    margin-top: 20px;
+    }
+
+    #seccion2 {
+     padding-top: 30px;        
+       
+}
+
+#seccion2 img {
+    max-width: 9%;
+    margin: 2px;
+}
+
+article > section:nth-child(3){
+    padding: 2rem;
+    max-width:100%;
+}
+
+.pokemon-todos {
+    display: grid;
+    grid-template-columns: 0.50fr 0.50fr;
+    gap: 2rem;
+}
+.pokemonImagen{
+    padding-inline: 0;
+
+}
+.pokemon-info {
+    padding-inline: 1rem;
+
+}
+
+.modal {
+    width: 90%;
+    height: 80%;
+    display:grid;
+    grid-template-columns: auto;
+    left: 5%;
+    
+}
+
 }
