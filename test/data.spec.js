@@ -1,5 +1,5 @@
 
-import { filtradoPorTipo, ordenar, ordenarZa, filtradoPorGeneracion } from '../src/data.js';
+import { filtradoPorTipo, ordenar, ordenarZa, filtradoPorGeneracion, busquedaName } from '../src/data.js';
 
 describe('filtradoPorGeneracion', () => {
   it('Devuelve un array solo con los elementos de la generacion especificada', () => {
@@ -15,12 +15,19 @@ describe('filtradoPorGeneracion', () => {
           num: "generation ii",
           name: "johto"
         }
+      }, {
+        id: 3,
+        generation: {
+          num: "generation ii",
+          name: "johto"
+        }
       }]
 
-    const generacion="kanto"
-    const resultado = filtradoPorGeneracion(data1, generacion)
-    expect(resultado).toContain([{
-      id: 1, generation: {
+    const generacion = "kanto"
+
+    expect(filtradoPorGeneracion(data1, generacion)).toStrictEqual([{
+      id: 1,
+      generation: {
         num: "generation i",
         name: "kanto"
       }
@@ -281,3 +288,25 @@ describe("ordenar de la Z a la A", () => {
     expect(ordenarZa(entrada)).toEqual(salidaAz)
   })
 });
+
+describe("busqueda", () => {
+  it("Busca el pokemon acorde al valor ingresado", () => {
+    const newArray = [{
+      name: "charmander",
+      type: "fire",
+    },
+    {
+      name: "charmeleon",
+      type: "fire",
+    },
+    {
+      name: "vulpix",
+      type: "fire",
+    }]
+    const input="charmander"
+    expect(busquedaName(newArray,input)).toContainEqual({
+      name: "charmander",
+      type: "fire",
+    },)
+  })
+})

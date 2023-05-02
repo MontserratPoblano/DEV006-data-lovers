@@ -199,10 +199,10 @@ export function ordenarZa(data){
  
 
 
-export function busquedaName(){
+export function busquedaName(data,input){
 
-  const input=document.getElementById("busqueda");
-  const searchName=Objetos.pokemon.filter(pokemon=>pokemon.name.toLowerCase().match((input.value.toLowerCase())))
+  
+  const searchName=data.filter(pokemon=>pokemon.name.toLowerCase().match((input.toLowerCase())))
   return searchName
 }
 

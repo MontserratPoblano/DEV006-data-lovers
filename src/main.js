@@ -22,7 +22,7 @@ navburger.addEventListener("click", ()=>
   navMenu2.classList.toggle("nav-menu_visible"));
 const contenedorPoke=document.querySelector("#lista-pokebola");
 const contadorPokemon=document.querySelector(".card-total");
-const vaciarPokebola=document.querySelector("#vaciar-pokebola");
+const input=document.getElementById("busqueda")
 
   
 
@@ -71,7 +71,7 @@ btnGeneracion.addEventListener("click",(e)=>{
 btnGeneracion2.addEventListener("click",(e)=>{
   const generacion=e.target.id;
   pokemonPantalla=filtradoPorGeneracion(Objetos.pokemon,generacion)
-  console.log(pokemonPantalla)
+  
   const johto=pokemonPantalla.length
   const total=Objetos.pokemon.length
   const porciento=johto * 100/total
@@ -81,8 +81,8 @@ btnGeneracion2.addEventListener("click",(e)=>{
 
 iconobusqueda.addEventListener("click", ()=>{
   listaPokemon.innerHTML = " ";
-  pokemonPantalla = busquedaName();
-  mostrarPokemon(pokemonPantalla) 
+  const datosBusqueda=busquedaName(pokemonPantalla,input.value);
+  mostrarPokemon(datosBusqueda) 
 })
 
 
@@ -149,7 +149,7 @@ function carritoHTML() {
     
   });
 
-    contadorPokemon.innerText=totalPokemones
+  contadorPokemon.innerText=totalPokemones
   
   
 }
