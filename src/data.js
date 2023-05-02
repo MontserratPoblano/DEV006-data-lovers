@@ -153,6 +153,10 @@ export function filtradoPorTipo(data,type) {
 }
 
 
+export function filtradoPorGeneracion(data,generacion){
+  const datosGeneracion=data.filter(elemento=>elemento.generation.name.includes(generacion))
+  return datosGeneracion
+}
 
 
 export function ordenar(data){

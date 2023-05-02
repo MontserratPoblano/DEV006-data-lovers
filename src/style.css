@@ -181,6 +181,10 @@ th {
 box-shadow: 0 10px 10px 0 rgba(4, 25, 216, 0.5);   
 }
 
+td{
+    padding: 4px 4px;
+}
+
 .navegacion2{
     display: none;
 }
@@ -698,6 +702,10 @@ article > section:nth-child(3){
     padding-inline: 1rem;
     display: flex;
     justify-content: center;
+}
+
+.pokebola{
+    cursor:pointer;
 }
 
 .pokemon-info {
