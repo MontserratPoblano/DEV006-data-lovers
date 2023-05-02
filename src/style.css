@@ -676,10 +676,9 @@ article > section:nth-child(3){
     display:flex;
     flex-direction: column;
     justify-content: center;
-    
-  
-   
 }
+
+
 .pokemon-todos {
     display: grid;
     grid-template-columns: 0.18fr 0.18fr 0.18fr 0.18fr;
@@ -744,8 +743,6 @@ article > section:nth-child(3){
     width: 70px;
     height: 35px;
     background-color: #41414a;
-    /*background-color: rgba(4,25,216,.17);
-    box-shadow: 0 0 3rem -1rem rgba(4, 25, 216, 0.4);*/
     border-radius: 20px;
     border:white;
     color:white;
@@ -802,7 +799,6 @@ article > section:nth-child(3){
     
     width: 25px;
     height: 25px;
-   /* margin-top: 10px;*/
    position: absolute;
    top:5px;
    right:5px;
@@ -811,14 +807,7 @@ article > section:nth-child(3){
     
 }
 
-/*.modal .caja1{
-    display:flex;
-    justify-content: space-between;
-    margin: top 20px; 
-    padding: 40px 10px; 
-    border: 1px solid red;
-   
-}*/
+
 
 .modal .imagen-pokemon{
     
@@ -857,6 +846,7 @@ article > section:nth-child(3){
    color:#293462;
    
 }
+
 
 .baseDefensa{
     width: 100%;
