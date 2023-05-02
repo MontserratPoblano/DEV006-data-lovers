@@ -61,6 +61,10 @@ https://scene.zeplin.io/project/644fe2890586d025f6fdee45
 
 Este proyecto fue elaborado por Valentina Paraguatey y Montserrat Poblano
 
+## Link de pagina despliegada
+
+https://montserratpoblano.github.io/DEV006-data-lovers/src/
+
 
 
 
