@@ -676,10 +676,9 @@ article > section:nth-child(3){
     display:flex;
     flex-direction: column;
     justify-content: center;
-    
-  
-   
 }
+
+
 .pokemon-todos {
     display: grid;
     grid-template-columns: 0.18fr 0.18fr 0.18fr 0.18fr;
@@ -690,8 +689,6 @@ article > section:nth-child(3){
 
 .pokemon {
     border-radius: 1rem;
-    /*background-color: rgba(4, 25, 216, .17);
-    box-shadow: 0 0 3rem -1rem rgba(4, 25, 216, 0.4);*/
     background-color: #9ae5f3;
     padding-block: 1rem;
     text-transform: uppercase;
@@ -746,8 +743,6 @@ article > section:nth-child(3){
     width: 70px;
     height: 35px;
     background-color: #41414a;
-    /*background-color: rgba(4,25,216,.17);
-    box-shadow: 0 0 3rem -1rem rgba(4, 25, 216, 0.4);*/
     border-radius: 20px;
     border:white;
     color:white;
@@ -804,7 +799,6 @@ article > section:nth-child(3){
     
     width: 25px;
     height: 25px;
-   /* margin-top: 10px;*/
    position: absolute;
    top:5px;
    right:5px;
@@ -813,14 +807,7 @@ article > section:nth-child(3){
     
 }
 
-/*.modal .caja1{
-    display:flex;
-    justify-content: space-between;
-    margin: top 20px; 
-    padding: 40px 10px; 
-    border: 1px solid red;
-   
-}*/
+
 
 .modal .imagen-pokemon{
     
@@ -862,66 +849,6 @@ article > section:nth-child(3){
 
 
 
-/*.modal .infoGeneral {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 50%;
-    height: 10%;
-    border: 1px solid salmon;
-    overflow: hidden;
-    
-}*/
-/*
-
-.modal .infoGeneral p{
-    font-size: 15px;
-    color:#292929;
-    text-align: center;
-}*/
-
-/*.modal .infoGeneral .fa-solid{
-    color:#FFD700
-}
-
-/*.modal .caja-alineada{
-display: flex;
-justify-content: space-around;
-margin-top:20px;
-border: 1px solid green;
-}*/
-
-/*.caja-alineada .baseDefensa .fa-solid{
-    color:#FFD700
-}
-
-.caja-alineada .baseDefensa{
-    margin-top: 22px;
-    padding-top: 30px;
-}*/
-
-/*.modal .resistant{
-    border:4px solid #19e938;
-    border-radius: 30px;
-    width: 50%;
-    height: auto;
-    border:#19e938
-
-}
-
-.modal .weaknesses{
-    border:4px solid #d20906;
-    border-radius: 30px;
-    width: 180px;
-    height: 200px;
-    
-}
-
-/*.modal .caja-alineada2{
-    display: flex;
-    justify-content: space-around;
-
-}*/
 .baseDefensa{
     width: 100%;
     grid-column: 2 / 3;

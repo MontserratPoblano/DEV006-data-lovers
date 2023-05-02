@@ -20,8 +20,9 @@ const navburger=document.querySelector(".nav-burger");
 const navMenu2=document.querySelector(".menu-nav2");
 navburger.addEventListener("click", ()=>
   navMenu2.classList.toggle("nav-menu_visible"));
-const contenedorPoke=document.querySelector("#lista-pokebola")
-const vaciarPokebola=document.querySelector("#vaciar-pokebola")
+const contenedorPoke=document.querySelector("#lista-pokebola");
+const contadorPokemon=document.querySelector(".card-total");
+const vaciarPokebola=document.querySelector("#vaciar-pokebola");
 
   
 
@@ -87,6 +88,7 @@ iconobusqueda.addEventListener("click", ()=>{
 
 listaPokemon.addEventListener("click",agregarPokemon)
 let articulosCarrito=[];
+
 let tipos2=[];
 function agregarPokemon(e){
   
@@ -124,6 +126,7 @@ function agregarPokemon(e){
 
 
 function carritoHTML() {
+  let totalPokemones=0;
   contenedorPoke.innerHTML = " ";
   
   articulosCarrito.forEach(pokebo => {
@@ -136,18 +139,22 @@ function carritoHTML() {
      <td>${pokebo.nombre}</td>
      <td>${pokebo.cantidad}</td>
      <td>${pokebo.tipo} </td>
+     
   `;
    
     contenedorPoke.appendChild(row);
+    totalPokemones=totalPokemones+pokebo.cantidad;
+    
   });
+
+    contadorPokemon.innerText=totalPokemones
+  
   
 }
 
-vaciarPokebola.addEventListener("click",()=>{
-      
-})
 
-  
+
+
 
 
 
