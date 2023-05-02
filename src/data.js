@@ -87,7 +87,7 @@ export  function mostrarPokemon(data) {
       <p class="defensa"><i class="fa-solid fa-check"></i></i>Max-hp:</i>${filterByType[index].stats["max-hp"]}</p>
       </div>
       <div class="specialAtack">
-      <h3>Special special-attack</h3>
+      <h3>Special-attack</h3>
       <ul>
         <li><i class="fa-solid fa-check"></i>Name:${filterByType[index]["special-attack"][0].name}</li>
         <li><i class="fa-solid fa-check"></i>Type:${filterByType[index]["special-attack"][0].type}</li>
